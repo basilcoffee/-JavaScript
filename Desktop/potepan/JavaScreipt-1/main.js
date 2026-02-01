@@ -24,7 +24,7 @@ function measure(){
       let hours = Math.floor(elapsedTime / 1000 / 60 / 60);
       let minutes = Math.floor(elapsedTime / 1000 / 60 % 60);
       let seconds = Math.floor(elapsedTime / 1000 % 60);
-      let milliseconds = Math.floor(elapsedTime % 60 / 10);
+      let milliseconds = Math.floor(elapsedTime / 100 % 10);
       stopwatch.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
   }, 100);
 }
